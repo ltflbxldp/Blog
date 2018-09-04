@@ -5,8 +5,11 @@ from datetime import datetime
 from django.http import Http404
 
 def home(request):
-    post_list = Article.objects.all()  # 获取全部的Article对象
+    post_list = Article.objects.all()  # get all article objects
     return render(request, 'blog/home.html', {'post_list': post_list})
+
+def resume(request):
+    return render(request, 'blog/resume.html')
 
 def Test(request):
     return render(request, 'blog/test.html', {'current_time': datetime.now()})

@@ -25,7 +25,7 @@ SECRET_KEY = '%r8kri&hg*^0!bihdg#ocx*^fvs#j(^tlbak*6!&*^c8%9h27t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -105,7 +105,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-#公共的static文件
+# public static files
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,"common_static"),
     os.path.join(BASE_DIR,"media"),
